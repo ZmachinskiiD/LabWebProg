@@ -7,8 +7,8 @@ services:
   volumes:
    - ./code:/code
   links:
-	- php
+      - php
 php:
-	image: php:7-fpm
-	volumes:
-		- ./code:/code	
+    image: php:7-fpm
+    volumes:
+        - ./code:/code	
