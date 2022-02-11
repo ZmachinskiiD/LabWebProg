@@ -15,3 +15,7 @@ echo "\n" ;
 echo $SecondNumber."<br>";
 $SDRT = 12.34;
 echo $SDRT. "<br>";
+echo "12". "<br>";
+$last_Month = 1187.23;
+$this_Month = 1089.98;
+echo ($last_Month-$this_Month)."<br>";
