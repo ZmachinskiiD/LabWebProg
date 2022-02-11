@@ -112,3 +112,53 @@ function printStringReturnNumber(string $string):int
 }
 $my_num = printStringReturnNumber('Ono Rabotaet');
 echo $my_num;
+/////////////stage8 (16)///////////////////////
+echo "<br>"."Functions_Part2"."<br>";
+function increaseEnthusiasm(string $string):string
+{
+    $string.='!';
+    return $string;
+}
+echo increaseEnthusiasm('I don\'t know what to write here')."<br>";
+////////////////////REPEATER///////////////////////////////////////////////
+function repeatThreeTimes(string $string):string
+{
+    $string.=$string.$string;
+    return $string;
+}
+echo repeatThreeTimes(increaseEnthusiasm('Tri_Tankista'))."<br>";
+/////////////////////////////////////CUT////////////////////////////////////////////
+function cut(string $string, int $int=10):string
+{
+    $ret = "";
+    for($i = 0; $i < $int; $i++)
+        $ret.=$string[$i];
+    return $ret;
+}
+echo cut("I am happy and i know it",11)."<br>";
+/////////////////////////////Array stuff///////////////////////////////
+function AlterArray($arr, $num)
+{
+    if ($num < sizeof($arr))
+    {
+        echo $arr[$num]." ";
+        AlterArray($arr, $num+1);
+    }
+}
+$array = array(10,20,13,4,67,7,9,19);
+AlterArray($array, 0);
+
+function SumOfNumbers($num)
+{
+    $sum = 0;
+    while ($num > 0)
+    {
+        $sum+=$num%10;
+        $num/=10;
+    }
+    if ($sum > 9) return SumOfNumbers($sum);
+    else return($sum);
+}
+echo "<br>"."Сумма чисел равна ".SumOfNumbers(167)."<br>";
+
+
