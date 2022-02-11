@@ -9,10 +9,8 @@ echo "\nYour order is: $very_bad_unclear_name.";
 //Пункт 2
 echo "<br>";
 $Number = 33;
-$SecondNumber = 129;
 echo $Number."<br>";
-echo "\n" ;
-echo $SecondNumber."<br>";
+echo "\n" ;;
 $SDRT = 12.34;
 echo $SDRT. "<br>";
 echo "12". "<br>";
