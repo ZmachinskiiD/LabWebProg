@@ -104,3 +104,11 @@ foreach ($Numbers5 as $value) {
     }
 }
 /////////////stage7 (15)///////////////////////
+echo "<br>"."Functions"."<br>";
+function printStringReturnNumber(string $string):int
+{
+    echo $string."<br>";
+    return 45543221;
+}
+$my_num = printStringReturnNumber('Ono Rabotaet');
+echo $my_num;
