@@ -36,10 +36,10 @@ echo "<br>";
 echo "Пункт 5(13)"."<br>";
 $mynum = 70;
 $answer = $mynum;
-$answer +=2;
-$answer *=2;
-$answer -=2;
-$answer /=2;
+$answer += 2;
+$answer *= 2;
+$answer -= 2;
+$answer /= 2;
 $answer -=$mynum;
 echo $answer."<br>";
 /////////////stage6 (14)///////////////////////
@@ -205,7 +205,7 @@ for($i = 0; $i < 3; $i++)
 print_r($Numbers9);
 
 $arr4=[2,5,3,9];
-$result = $arr4[0]*$arr4[1]+$arr4[2]*$arr4[3];
+$result = $arr4[0]* $arr4[1]+ $arr4[2]* $arr4[3];
 echo "<br>".$result."<br>";
 /////////////////////Имя Фанилия/////////
 $user = ['name' => 'Dmitrii', 'surname' => 'Zmachinskii', 'patronymic' => 'Germanovich',89,76];
@@ -217,3 +217,43 @@ $arr = ['a', 'b', 'c', 'd', 'e'];
 echo sizeof($arr)."<br>";
 echo $arr[sizeof($arr)-1]."<br>";
 echo $arr[sizeof($arr)-2]."<br>";
+/////////////stage10 (18)///////////////////////
+echo "<br>"."If ELSE stage18"."<br>";
+function Desyatka(int $a, int $b):bool
+{
+    if ($a+$b > 10)
+        return true;
+    else
+        return false;
+}
+echo Desyatka(2, 9). "<br>" ;
+function Isequal(int $a, int $b):bool
+{
+    if ($a == $b)
+        return true;
+    else
+        return false;
+}
+if (Isequal(51,51)) echo "Числа равны<br>";
+$test = 0;
+echo ($test == 0) ? 'true<br>' : 'false<br>';
+$age = rand(0, 300);
+echo "age = {$age}<br>";
+if ($age < 10) echo "{$age} is lower than 10<br>";
+else if ($age > 99) echo "{$age} is higher than 99<br>";
+else
+{
+    $sum = 0;
+    for ($i = 0; $i < strlen($age); $i++)
+    {
+        $sum += $age%10;
+        $age/=10;
+    }
+    echo ($sum > 9) ? "sum is two-digit<br>" : "sum is one-digit<br>";
+}
+
+$Numbers10 = [9,4,31,6];
+$sum = array_sum(Numbers10);
+echo (sizeof(Numbers10) == 3) ? "{$sum}<br>" : "oops" ;
+/////////////stage10 (19)///////////////////////
+echo "<br>"." stage19"."<br>";
