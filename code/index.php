@@ -132,7 +132,7 @@ function cut(string $string, int $int=10):string
 {
     $ret = "";
     for($i = 0; $i < $int; $i++)
-        $ret.=$string[$i];
+        $ret.= $string[$i];
     return $ret;
 }
 echo cut("I am happy and i know it",11)."<br>";
@@ -205,7 +205,7 @@ for($i = 0; $i < 3; $i++)
 print_r($Numbers9);
 
 $arr4=[2,5,3,9];
-$result = $arr4[0]* $arr4[1]+ $arr4[2]* $arr4[3];
+$result = $arr4[0] * $arr4[1] + $arr4[2] * $arr4[3];
 echo "<br>".$result."<br>";
 /////////////////////Имя Фанилия/////////
 $user = ['name' => 'Dmitrii', 'surname' => 'Zmachinskii', 'patronymic' => 'Germanovich',89,76];
@@ -215,8 +215,8 @@ $date = ['year' => 2022, 'month' => '02', 'day' => '11'];
 echo "Today is {$date['year']}-{$date['month']}-{$date['day']}<br>";
 $arr = ['a', 'b', 'c', 'd', 'e'];
 echo sizeof($arr)."<br>";
-echo $arr[sizeof($arr)-1]."<br>";
-echo $arr[sizeof($arr)-2]."<br>";
+echo $arr[sizeof($arr) - 1]."<br>";
+echo $arr[sizeof($arr) - 2]."<br>";
 /////////////stage10 (18)///////////////////////
 echo "<br>"."If ELSE stage18"."<br>";
 function Desyatka(int $a, int $b):bool
@@ -253,16 +253,10 @@ else
 }
 
 $Numbers10 = [9,4,31,6];
-$sum = array_sum(Numbers10);
-echo (sizeof(Numbers10) == 3) ? "{$sum}<br>" : "oops" ;
-/////////////stage10 (19)///////////////////////
-echo "<br>"." stage19"."<br>";
-$sum = array_sum($arr);
-echo (sizeof($arr) == 3) ? "{$sum}<br>" : "oops" ;
+$sum = array_sum($Numbers10);
+echo (sizeof($Numbers10) == 3) ? "{$sum}<br>" : "oops" ;
 
-echo "<br><br> 19. Cycles <br><br>";
-
-
+echo "<br> 19. Cycles <br>";
 for ($i = 1; $i <= 20; $i++)
 {
     for ($j = 1; $j <= $i; $j++)
@@ -270,3 +264,21 @@ for ($i = 1; $i <= 20; $i++)
     echo "<br>";
 }
 /////////////stage11 (20)///////////////////////
+ echo "<br>"."FuncComb stage20"."<br>";;
+echo "Sread Arefm"."<br>";;
+$Numbers11 = [4512,212,331,3424,5,61,73,1678];
+echo array_sum($Numbers11)/sizeof($Numbers11)."<br>";
+echo array_sum(range(1, 100))."<br>";
+$Numbers12 = [25,36,49,625,10000];
+print_r(array_map('sqrt', $Numbers12));
+
+$keys = range('a', 'z');
+$vals = range(1,26);
+$arr3= array_combine($keys, $vals);
+echo "<br>";
+print_r($arr3);
+echo "<br>";
+$numbers = '1234567890';
+$Numbers13 = str_split($numbers, 2);
+$res = array_sum($Numbers13);
+echo $res;
