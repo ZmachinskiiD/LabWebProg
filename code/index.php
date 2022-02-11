@@ -28,7 +28,17 @@ $months = 11;
 $days = $months * 16;
 $days_per_language = $days;
 echo $days_per_language."<br>";
-/////////////stage(4)///////////////////////
+/////////////stage4(12)///////////////////////
 echo "Пункт 4(12)"."<br>";
 echo 8**2;
 echo "<br>";
+/////////////stage5 (13)///////////////////////
+echo "Пункт 5(13)"."<br>";
+$mynum = 70;
+$answer = $mynum;
+$answer +=2;
+$answer *=2;
+$answer -=2;
+$answer /=2;
+$answer -=$mynum;
+echo $answer."<br>";
