@@ -257,3 +257,16 @@ $sum = array_sum(Numbers10);
 echo (sizeof(Numbers10) == 3) ? "{$sum}<br>" : "oops" ;
 /////////////stage10 (19)///////////////////////
 echo "<br>"." stage19"."<br>";
+$sum = array_sum($arr);
+echo (sizeof($arr) == 3) ? "{$sum}<br>" : "oops" ;
+
+echo "<br><br> 19. Cycles <br><br>";
+
+
+for ($i = 1; $i <= 20; $i++)
+{
+    for ($j = 1; $j <= $i; $j++)
+        echo "x";
+    echo "<br>";
+}
+/////////////stage11 (20)///////////////////////
