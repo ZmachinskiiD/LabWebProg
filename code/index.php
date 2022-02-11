@@ -28,4 +28,7 @@ $months = 11;
 $days = $months * 16;
 $days_per_language = $days;
 echo $days_per_language."<br>";
-
+/////////////stage(4)///////////////////////
+echo "Пункт 4(12)"."<br>";
+echo 8**2;
+echo "<br>";
