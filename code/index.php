@@ -113,7 +113,7 @@ function printStringReturnNumber(string $string):int
 $my_num = printStringReturnNumber('Ono Rabotaet');
 echo $my_num;
 /////////////stage8 (16)///////////////////////
-echo "<br>"."Functions_Part2"."<br>";
+echo "<br>"."Functions_Part2 stage16"."<br>";
 function increaseEnthusiasm(string $string):string
 {
     $string.='!';
@@ -161,4 +161,59 @@ function SumOfNumbers($num)
 }
 echo "<br>"."Сумма чисел равна ".SumOfNumbers(167)."<br>";
 
+/////////////stage9 (17)///////////////////////
+echo "<br>"."Arrays stage17"."<br>";;
+$Numbers7=[];
+for ($i = 1; $i <= 7; $i++)
+{
+    $Numbers7[$i-1]='';
+    for ($j = 0; $j < $i; $j++)
+        $Numbers7[$i-1].='x';
+}
+print_r($Numbers7);
+/////////////Array fill//////////////////////////
+function arrayFill($vol, int $num)
+{
+    $newNumbers = [];
+    for ($i = 1; $i <= $num; $i++) {
+        $newNumbers[$i - 1] = '';
+        for ($j = 0; $j < $i; $j++)
+            $newNumbers[$i - 1] .= $vol;
+    }
+    return $newNumbers;
+}
+echo "<br>";
+print_r(arrayFill('YES',4));
+echo "<br>";
+////////////////////////ДВумерный массив///////////////////////////////
+$Numbers8 = [[1,2,8],[4,5],[6],[34,67,890,1]];
+$sum = 0;
+foreach ($Numbers8 as $value)
+{
+    foreach ($value as $num)
+    {
+        $sum += $num;
+    }
+}
+echo "<br>"."Sum of numbers ".$sum."<br>";
+/////////////////////Цикл массиыный///////////
+$Numbers9 = [];
+$counter = 1;
+for($i = 0; $i < 3; $i++)
+    for($j = 0; $j < 3; $j++)
+        $Numbers9 [$i][$j] = $counter++;
+print_r($Numbers9);
 
+$arr4=[2,5,3,9];
+$result = $arr4[0]*$arr4[1]+$arr4[2]*$arr4[3];
+echo "<br>".$result."<br>";
+/////////////////////Имя Фанилия/////////
+$user = ['name' => 'Dmitrii', 'surname' => 'Zmachinskii', 'patronymic' => 'Germanovich',89,76];
+echo $user['surname']." ".$user['name']." ".$user['patronymic']."<br>";
+
+$date = ['year' => 2022, 'month' => '02', 'day' => '11'];
+echo "Today is {$date['year']}-{$date['month']}-{$date['day']}<br>";
+$arr = ['a', 'b', 'c', 'd', 'e'];
+echo sizeof($arr)."<br>";
+echo $arr[sizeof($arr)-1]."<br>";
+echo $arr[sizeof($arr)-2]."<br>";
