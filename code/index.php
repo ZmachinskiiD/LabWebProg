@@ -89,7 +89,7 @@ foreach ($Numbers4 as $value) {
 echo "<br>"."Общее"."<br>";
 $Deliteli = 612;
 $dividerAlgorithm = [];
-for ($i = 1; $i <= $Deliteli; $i++)
+for ($i = 0; $i <= $Deliteli; $i++)
     if ($Deliteli % $i == 0)
         $dividerAlgorithm[] = $i;
 print_r($dividerAlgorithm);
@@ -164,7 +164,7 @@ echo "<br>"."Сумма чисел равна ".SumOfNumbers(167)."<br>";
 /////////////stage9 (17)///////////////////////
 echo "<br>"."Arrays stage17"."<br>";;
 $Numbers7=[];
-for ($i = 1; $i <= 7; $i++)
+for ($i = 0; $i < 7; $i++)
 {
     $Numbers7[$i-1]='';
     for ($j = 0; $j < $i; $j++)
@@ -175,7 +175,7 @@ print_r($Numbers7);
 function arrayFill($vol, int $num)
 {
     $newNumbers = [];
-    for ($i = 1; $i <= $num; $i++) {
+    for ($i = 0; $i < $num; $i++) {
         $newNumbers[$i - 1] = '';
         for ($j = 0; $j < $i; $j++)
             $newNumbers[$i - 1] .= $vol;
