@@ -257,9 +257,9 @@ $sum = array_sum($Numbers10);
 echo (sizeof($Numbers10) == 3) ? "{$sum}<br>" : "oops" ;
 
 echo "<br> 19. Cycles <br>";
-for ($i = 1; $i <= 20; $i++)
+for ($i = 0; $i < 20; $i++)
 {
-    for ($j = 1; $j <= $i; $j++)
+    for ($j = 0; $j < $i; $j++)
         echo "x";
     echo "<br>";
 }
