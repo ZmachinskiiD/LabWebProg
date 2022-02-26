@@ -89,12 +89,45 @@ echo $_SESSION['textInfo'];
     <a href="/UserInformation.php">User Information</a>
     </body>
 <?php
-if ($_POST['sendToSession']) {
-if ($_POST['name'] && $_POST['surname'] && $_POST['age']) {
-$_SESSION['name'] = $_POST['name'];
-$_SESSION['surname'] = $_POST['surname'];
-$_SESSION['age'] = $_POST['age'];
-}
+if ($_POST['sendToSession'])
+{
+    if ($_POST['name'] && $_POST['surname'] && $_POST['age'])
+    {
+        $_SESSION['name'] = $_POST['name'];
+        $_SESSION['surname'] = $_POST['surname'];
+        $_SESSION['age'] = $_POST['age'];
+    }
 }
 ?>
+<body>
+<form method="POST">
+    <label>
+        NAME<input type="text" name="name_2" ><br>
+        SURNAME<input type="text" name="surname_2" required><br>
+        SALARY<input type="number" name="salary_2" required><br>
+        MARITAL STATUS
+        <select name="status" required>
+            <option>SINGLE</option>
+            <option>MARRIED</option>
+            <option>DIVORCED</option>
+            <option>WIDOW(ER)</option>
+        </select><br>
+        <input type="submit" value="Записать в сессию" name="sendToSessionArray"><br>
+    </label>
+    <a href="/UserInformation.php">User Information</a>
+</form>
+</body>
+<?php
+if ($_POST['sendToSessionArray']) {
+    if ($_POST['name_2'] && $_POST['surname_2'] && $_POST['salary_2'] && $_POST['status']) {
+        $_SESSION['userInformation'] = array('name' => $_POST['name_2'],
+            'surname' => $_POST['surname_2'],
+            'salary' => $_POST['salary_2'],
+            'status' => $_POST['status']
+        );
+    }
+}
+?>
+
+
 
