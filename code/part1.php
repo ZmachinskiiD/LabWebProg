@@ -74,4 +74,27 @@ if ($_POST['getWordsAndSymbols'])
         $_SESSION['textInfo'] = 'U didnt put anything u stupid';
     }
 }
-echo $_SESSION['textInfo']; 
+echo $_SESSION['textInfo'];
+///////////////////////////////b//////////////////////////////////////////////////////////
+?>
+    <body>
+    <form method="POST">
+        <label>
+            NAME<input type="text" name="name" required><br>
+            SURNAME<input type="text" name="surname" required><br>
+            AGE<input type="number" name="age" required><br>
+            <input type="submit" value="Записать в сессию" name="sendToSession">
+        </label>
+    </form>
+    <a href="/UserInformation.php">User Information</a>
+    </body>
+<?php
+if ($_POST['sendToSession']) {
+if ($_POST['name'] && $_POST['surname'] && $_POST['age']) {
+$_SESSION['name'] = $_POST['name'];
+$_SESSION['surname'] = $_POST['surname'];
+$_SESSION['age'] = $_POST['age'];
+}
+}
+?>
+
