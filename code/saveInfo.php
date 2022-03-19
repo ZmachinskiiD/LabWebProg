@@ -1,10 +1,10 @@
 <?php
 require "../vendor/autoload.php";
-if($_GET["email"] != "" && $_GET["category"] != "Choose category" && $_GET["header"] != "" && $_GET["text"] != "")
+if($_GET["email"] != "" && $_GET["type"] != "Choose category" && $_GET["headline"] != "" && $_GET["text"] != "")
 {
     $email = $_GET["email"];
-    $header = $_GET["header"];
-    $category = $_GET["category"];
+    $header = $_GET["headline"];
+    $category = $_GET["type"];
     $text = $_GET["text"];
     $adFile = fopen("categories/$category/$header.txt" , "w");
     $adText = "$email\n$header\n$text";
